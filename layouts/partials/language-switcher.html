@@ -1,0 +1,18 @@
+<div class="language-switcher">
+  <select class="lang-select block text-center text-2xl leading-[5rem] lg:text-base lg:font-normal" onchange="window.location.href=this.value">
+    {{ $currentLang := site.Language }}
+    {{ range site.Languages }}
+      {{ $url := "" }}
+      {{ if $.Page.IsHome }}
+        {{ $url = "/" }}
+      {{ else }}
+        {{ $url = $.Page.RelPermalink }}
+        {{ $url = replaceRE (printf "^/%s/" site.Language.Lang) "/" $url }}
+      {{ end }}
+      {{ $fullUrl := print "/" .Lang $url }}
+      <option value="{{ $fullUrl }}" {{ if eq . $currentLang }}selected{{ end }}>
+        {{ if eq .Lang "zh" }}🇨🇳{{ else }}🇬🇧{{ end }} {{ .LanguageName }}
+      </option>
+    {{ end }}
+  </select>
+</div> 

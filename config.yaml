@@ -1,0 +1,44 @@
+baseURL: "https://example.com"
+defaultContentLanguage: "zh"
+
+# 语言设置
+languages:
+  zh:
+    languageName: "中文"
+    weight: 1
+    title: "我的博客"
+    params:
+      description: "这是一个博客"
+    menu:
+      main:
+        - identifier: archives
+          name: 归档
+          url: /archives/
+          weight: 10
+        - identifier: tags
+          name: 标签
+          url: /tags/
+          weight: 20
+
+  en:
+    languageName: "English"
+    weight: 2
+    title: "My Blog"
+    params:
+      description: "This is a blog"
+    menu:
+      main:
+        - identifier: archives
+          name: Archives
+          url: /archives/
+          weight: 10
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 20
+
+# 确保启用了多语言功能
+enableGlobalLanguageMenu: true
+
+params:
+  customCSS: ["css/custom.css"] 

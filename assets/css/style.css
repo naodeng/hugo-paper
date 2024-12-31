@@ -1,0 +1,103 @@
+/* ... 现有样式 ... */
+
+/* 导航样式 */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--nav-width);
+  margin: 0 auto;
+  padding: 0 var(--gap);
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+}
+
+.logo {
+  margin-right: var(--gap);
+  font-weight: bold;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  word-break: keep-all;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 0;
+}
+
+.menu li a {
+  padding: 8px 12px;
+}
+
+/* 语言切换器样式 */
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: var(--gap);
+  font-size: 14px;
+}
+
+.active-lang {
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.lang-link {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.lang-link:hover {
+  color: var(--primary);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: var(--gap);
+    padding-bottom: var(--gap);
+  }
+
+  .nav-right {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: var(--gap);
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  .menu li a {
+    display: block;
+    padding: 8px 0;
+  }
+
+  .language-switcher {
+    margin: var(--gap) 0 0 0;
+    padding-left: 0;
+  }
+}
+
+/* ... 现有样式 ... */ 
